@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="nav">
+          <ul>
+            <li><a href="#">Admin</a></li>
+            <li><a href="#">Termékeink</a></li>
+            <li><a href="#">Személyes adatok</a></li>
+            <li class="basket-button"><a href="#">Kosár 🛒</a></li>
+          </ul>
+        </div>
+        <div class="basket-container invisible">
+          <div class="basket"></div>
+        </div>
+        <div class="article">
+          <select name="sort-options" id="sort-options">
+            <option value="1">Rendezési szempont</option>
+            <option value="2">Név szerint növekvő ⬆</option>
+            <option value="3">Név szerint csökkenő ⬇</option>
+            <option value="4">Ár szerint növekvő ⬆</option>
+            <option value="5">Ár szerint csökkenő ⬇</option>
+          </select>
+          <input type="text" placeholder="Keresés" id="search-bar" />
+          <div class="card-container"></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
