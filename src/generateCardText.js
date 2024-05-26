@@ -7,7 +7,7 @@ const generateCardText = (toys) => {
         <p class="card-info">${toy.info}</p>
         <p class="card-price"><strong>${toy.price} Ft</strong></p>
         <button class='card__add-button' id=${i}>Kosárba</button>
-        <img src='/toy-pic.svg' alt=''>
+        <img src='images/toy-pic.svg' alt=''>
       </div>`;
   });
   return text;

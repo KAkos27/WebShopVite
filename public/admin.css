@@ -1,0 +1,7 @@
+.add-item-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 70%;
+}

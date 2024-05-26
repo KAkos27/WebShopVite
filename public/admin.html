@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="admin.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Vite App</title>
   </head>
   <body>
@@ -13,8 +13,8 @@
       <div class="container">
         <div class="nav">
           <ul>
-            <li><a href="#">Admin</a></li>
-            <li><a href="#">Termékeink</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="/index.html">Termékeink</a></li>
             <li><a href="#">Személyes adatok</a></li>
             <li class="basket-button"><a href="#">Kosár 🛒</a></li>
           </ul>
@@ -31,10 +31,28 @@
             <option value="5">Ár szerint csökkenő ⬇</option>
           </select>
           <input type="text" placeholder="Keresés" id="search-bar" />
-          <div class="card-container"></div>
+          <form class="add-item-form" method="post">
+            <label for="name">Név:</label>
+            <input type="text" name="item-name" id="item-name" required />
+            <label for="description">Leírás</label>
+            <textarea
+              name="description"
+              id="description"
+              cols="30"
+              rows="10"
+              maxlength="150"
+              wrap="soft"
+              required
+            ></textarea>
+            <label for="price">Ár:</label>
+            <input type="number" name="price" id="price" min="0" required />
+            <input type="submit" value="kész" />
+          </form>
+          <div class="table-container"></div>
         </div>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
