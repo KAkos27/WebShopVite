@@ -1,28 +1,30 @@
 import initBasket from "./initBasket.js";
-import toys from "../data/toys.json" with { type: "json" };
+import getToys from "../data/getToys.js";
+
+const toys = getToys();
 
 const addToBasketList = (i) => {
   const product = {
-    name: toys.toys[i].name,
-    price: toys.toys[i].price,
-    amount: toys.toys[i].amount,
+    name: toys[i].name,
+    price: toys[i].price,
+    amount: toys[i].amount,
   };
 
   let match = false;
-  Object.keys(localStorage).forEach((item) => {
-    const currentItem = JSON.parse(localStorage.getItem(item));
+  Object.keys(sessionStorage).forEach((item) => {
+    const currentItem = JSON.parse(sessionStorage.getItem(item));
     if (currentItem.name === product.name) {
       match = true;
     }
   });
 
   if (match) {
-    const item = JSON.parse(localStorage.getItem(i));
+    const item = JSON.parse(sessionStorage.getItem(i));
     item.amount++;
-    localStorage.removeItem(i);
-    localStorage.setItem(i, JSON.stringify(item));
+    sessionStorage.removeItem(i);
+    sessionStorage.setItem(i, JSON.stringify(item));
   } else {
-    localStorage.setItem(i, JSON.stringify(product));
+    sessionStorage.setItem(i, JSON.stringify(product));
   }
   match = 0;
 };

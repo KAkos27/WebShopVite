@@ -32,7 +32,7 @@
           </select>
           <input type="text" placeholder="Keresés" id="search-bar" />
           <form class="add-item-form" method="post">
-            <label for="name">Név:</label>
+            <label for="item-name">Név:</label>
             <input type="text" name="item-name" id="item-name" required />
             <label for="description">Leírás</label>
             <textarea
@@ -46,7 +46,7 @@
             ></textarea>
             <label for="price">Ár:</label>
             <input type="number" name="price" id="price" min="0" required />
-            <input type="submit" value="kész" />
+            <input id="add-item" type="submit" value="kész" />
           </form>
           <div class="table-container"></div>
         </div>

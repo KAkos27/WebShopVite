@@ -1,7 +1,10 @@
-import createTable from "./createTable.js";
+import generateTableText from "./generateTableText.js";
+import createHtmlElement from "../createHtmlElement.js";
 
 const initTable = (toys) => {
-  createTable(toys);
+  const htmlText = generateTableText(toys);
+  const container = $(".table-container");
+  createHtmlElement(container, htmlText);
 };
 
 export default initTable;

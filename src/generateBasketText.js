@@ -1,8 +1,8 @@
 const generateBasketText = () => {
   let text = `<table>`;
   let final = 0;
-  Object.keys(localStorage).forEach((item) => {
-    const currentItem = JSON.parse(localStorage.getItem(item));
+  Object.keys(sessionStorage).forEach((item) => {
+    const currentItem = JSON.parse(sessionStorage.getItem(item));
     const currentPrice = currentItem.price * currentItem.amount;
     text += `
         <tr>

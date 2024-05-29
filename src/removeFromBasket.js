@@ -1,14 +1,14 @@
 import initBasket from "./initBasket.js";
 
 const removeFromArray = (index) => {
-  const currentItem = JSON.parse(localStorage.getItem(index));
+  const currentItem = JSON.parse(sessionStorage.getItem(index));
   const moreThanOne = currentItem.amount > 1;
   if (moreThanOne) {
     currentItem.amount--;
-    localStorage.removeItem(index);
-    localStorage.setItem(index, JSON.stringify(currentItem));
+    sessionStorage.removeItem(index);
+    sessionStorage.setItem(index, JSON.stringify(currentItem));
   } else {
-    localStorage.removeItem(index);
+    sessionStorage.removeItem(index);
   }
 };
 

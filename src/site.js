@@ -2,15 +2,17 @@ import init from "./init.js";
 import clickBasketButton from "./clickBaskeButton.js";
 import searchFromCards from "./searchFromCards.js";
 import initBasket from "./initBasket.js";
-import toys from "../data/toys.json" with { type: "json" };
-import initTable from "./admin/initTable.js";
+import getToys from "../data/getToys.js";
+import addItem from "./admin/addItem.js";
+
+const toys = getToys();
 
 const site = () => {
-  init(toys.toys);
+  init(toys);
   initBasket();
-  initTable(toys)
   clickBasketButton();
-  searchFromCards(toys.toys);
+  searchFromCards(toys);
+  addItem();
 };
 
 export default site;

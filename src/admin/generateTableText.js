@@ -1,6 +1,18 @@
 const generateTableText = (toys) => {
-  let txt = `<table>`;
-
+  let txt = `
+    <table>
+      <tr>
+        <th>Név</th>
+        <th>Ár</th>
+        <th>Törlés</th>
+      </tr>`;
+  toys.forEach((toy) => {
+    txt += `<tr>
+              <td>${toy.name}</td>
+              <td>${toy.price}</td>
+              <td>x</td>
+            </tr>`;
+  });
   txt += `</table>`;
   return txt;
 };

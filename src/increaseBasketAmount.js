@@ -1,10 +1,10 @@
 import initBasket from "./initBasket.js";
 
 const increaseAmount = (index) => {
-  const currentItem = JSON.parse(localStorage.getItem(index));
+  const currentItem = JSON.parse(sessionStorage.getItem(index));
   currentItem.amount++;
-  localStorage.removeItem(index);
-  localStorage.setItem(index, JSON.stringify(currentItem));
+  sessionStorage.removeItem(index);
+  sessionStorage.setItem(index, JSON.stringify(currentItem));
 };
 
 const increaseBasketAmount = () => {
