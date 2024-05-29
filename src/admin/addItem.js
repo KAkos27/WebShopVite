@@ -16,8 +16,6 @@ const addItem = () => {
       price: itemPrice,
     };
 
-    console.log(item);
-
     let toys = getToys();
     localStorage.setItem(toys.length, JSON.stringify(item));
 
