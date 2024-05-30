@@ -1,10 +1,18 @@
 import initBasket from "./initBasket.js";
 
-const addToBasketList = (i, toys) => {
+const addToBasketList = (id, toys) => {
+  let index = 0;
+
+  toys.forEach((toy, i) => {
+    if (toy.id == id) {
+      index = i;
+    }
+  });
+
   const product = {
-    name: toys[i].name,
-    price: toys[i].price,
-    amount: toys[i].amount,
+    name: toys[index].name,
+    price: toys[index].price,
+    amount: toys[index].amount,
   };
 
   let match = false;
@@ -16,12 +24,12 @@ const addToBasketList = (i, toys) => {
   });
 
   if (match) {
-    const item = JSON.parse(sessionStorage.getItem(i));
+    const item = JSON.parse(sessionStorage.getItem(id));
     item.amount++;
-    sessionStorage.removeItem(i);
-    sessionStorage.setItem(i, JSON.stringify(item));
+    sessionStorage.removeItem(id);
+    sessionStorage.setItem(id, JSON.stringify(item));
   } else {
-    sessionStorage.setItem(i, JSON.stringify(product));
+    sessionStorage.setItem(id, JSON.stringify(product));
   }
   match = 0;
 };
