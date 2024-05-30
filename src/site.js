@@ -4,10 +4,12 @@ import searchFromCards from "./searchFromCards.js";
 import initBasket from "./initBasket.js";
 import getToys from "../data/getToys.js";
 import addItem from "./admin/addItem.js";
-
-const toys = getToys();
+import setFixItems from "../data/setFixItems.js";
 
 const site = () => {
+  setFixItems();
+
+  const toys = getToys();
   init(toys);
   initBasket();
   clickBasketButton();

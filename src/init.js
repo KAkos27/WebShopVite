@@ -7,7 +7,7 @@ const init = (toys) => {
   createCards(toys);
   orderCards(toys);
   initTable(toys);
-  addToBasket();
+  addToBasket(toys);
 };
 
 export default init;

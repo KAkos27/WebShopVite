@@ -1,9 +1,6 @@
 import initBasket from "./initBasket.js";
-import getToys from "../data/getToys.js";
 
-const toys = getToys();
-
-const addToBasketList = (i) => {
+const addToBasketList = (i, toys) => {
   const product = {
     name: toys[i].name,
     price: toys[i].price,
@@ -29,10 +26,10 @@ const addToBasketList = (i) => {
   match = 0;
 };
 
-const addToBasket = () => {
+const addToBasket = (toys) => {
   const addButton = $(".card__add-button");
   addButton.on("click", (event) => {
-    addToBasketList(event.target.id);
+    addToBasketList(event.target.id, toys);
     initBasket();
   });
 };
