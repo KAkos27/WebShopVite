@@ -5,24 +5,29 @@ const addItem = () => {
   const addItemButton = $("#add-item");
   addItemButton.on("click", (event) => {
     event.preventDefault();
+
     const itemName = $("#item-name").val();
     const itemInfo = $("#description").val();
-    const itemPrice = parseInt($("#price").val());
+    const itemPrice = $("#price").val();
 
-    let toys = getToys();
+    const empty = itemName === "" || itemInfo === "" || itemPrice === "";
 
-    const item = {
-      id: toys.length,
-      name: itemName,
-      info: itemInfo,
-      amount: 1,
-      price: itemPrice,
-    };
+    if (!empty) {
+      let toys = getToys();
 
-    localStorage.setItem(item.id, JSON.stringify(item));
+      const item = {
+        id: toys.length,
+        name: itemName,
+        info: itemInfo,
+        amount: 1,
+        price: parseInt(itemPrice),
+      };
 
-    toys = getToys();
-    init(toys);
+      localStorage.setItem(item.id, JSON.stringify(item));
+
+      toys = getToys();
+      init(toys);
+    }
   });
 };
 

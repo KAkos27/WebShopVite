@@ -10,7 +10,7 @@ const generateTableText = (toys) => {
     txt += `<tr>
               <td>${toy.name}</td>
               <td>${toy.price}</td>
-              <td>x</td>
+              <td id=r${toy.id} class="delete-item-button">x</td>
             </tr>`;
   });
   txt += `</table>`;
