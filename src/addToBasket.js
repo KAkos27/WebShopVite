@@ -10,6 +10,7 @@ const addToBasketList = (id, toys) => {
   });
 
   const product = {
+    id: toys[index].id,
     name: toys[index].name,
     price: toys[index].price,
     amount: toys[index].amount,
@@ -18,7 +19,7 @@ const addToBasketList = (id, toys) => {
   let match = false;
   Object.keys(sessionStorage).forEach((item) => {
     const currentItem = JSON.parse(sessionStorage.getItem(item));
-    if (currentItem.name === product.name) {
+    if (currentItem.id === product.id) {
       match = true;
     }
   });
