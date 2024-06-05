@@ -54,6 +54,11 @@ body {
 .nav ul li a {
   color: #302e2eab;
   text-decoration: none;
+  transition: 100ms ease;
+}
+
+.nav ul li a:hover {
+  color: hsl(0, 2%, 60%);
 }
 
 .basket-container {
@@ -211,4 +216,58 @@ td {
 
 .form-elements:focus {
   outline: none;
+}
+
+.show-on-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .show-on-mobile {
+    display: block;
+  }
+
+  .nav {
+    background-color: #ffffff00;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
+  }
+
+  .article {
+    grid-column: 1/13;
+    padding: 0;
+    padding-top: 2rem;
+  }
+
+  .sort-options {
+    margin-left: 1.2rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .card {
+    grid-template-rows: 20% 60% 20%;
+    height: 14rem;
+  }
+
+  .card-info {
+    align-items: center;
+    display: flex;
+    font-size: 0.75rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card-price {
+    font-size: 0.8rem;
+  }
+
+  .card__add-button {
+    margin-top: 1rem;
+  }
 }

@@ -10,7 +10,13 @@ const addItem = () => {
     const itemInfo = $("#description").val();
     const itemPrice = $("#price").val();
 
-    const empty = itemName === "" || itemInfo === "" || itemPrice === "";
+    const empty =
+      itemName === "" ||
+      itemInfo === "" ||
+      itemPrice === "" ||
+      itemName.includes("  ") ||
+      itemInfo.includes("  ") ||
+      itemPrice.includes("  ");
 
     if (!empty) {
       let toys = getToys();

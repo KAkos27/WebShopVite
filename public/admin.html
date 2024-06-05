@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="admin.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kutyajáték Webshop</title>
@@ -14,8 +14,7 @@
         <div class="nav">
           <ul>
             <li><a href="admin.html">Admin</a></li>
-            <li><a href="/index.html">Termékeink</a></li>
-            <li><a href="#">Személyes adatok</a></li>
+            <li><a href="../index.html">Termékeink</a></li>
             <li class="basket-button"><a href="#">Kosár 🛒</a></li>
           </ul>
         </div>
@@ -23,19 +22,6 @@
           <div class="basket"></div>
         </div>
         <div class="article">
-          <select class="form-elements" name="sort-options" id="sort-options">
-            <option value="1">Rendezési szempont</option>
-            <option value="2">Név szerint növekvő ⬆</option>
-            <option value="3">Név szerint csökkenő ⬇</option>
-            <option value="4">Ár szerint növekvő ⬆</option>
-            <option value="5">Ár szerint csökkenő ⬇</option>
-          </select>
-          <input
-            class="form-elements"
-            type="text"
-            placeholder="Keresés"
-            id="search-bar"
-          />
           <form class="add-item-form" method="post">
             <label for="item-name">Név:</label>
             <input
@@ -47,12 +33,12 @@
             />
             <label for="description">Leírás</label>
             <textarea
-              class="form-elements"
+              class="form-elements description"
               name="description"
               id="description"
               cols="30"
               rows="10"
-              maxlength="300"
+              maxlength="200"
               wrap="soft"
               required
             ></textarea>
@@ -66,10 +52,10 @@
               required
             />
             <input
-              class="form-elements"
+              class="form-elements add-item"
               id="add-item"
               type="submit"
-              value="kész"
+              value="Hozzáad"
             />
           </form>
           <div class="table-container"></div>

@@ -9,7 +9,7 @@ const generateTableText = (toys) => {
   toys.forEach((toy) => {
     txt += `<tr>
               <td>${toy.name}</td>
-              <td>${toy.price}</td>
+              <td>${toy.price} Ft</td>
               <td id=r${toy.id} class="delete-item-button">x</td>
             </tr>`;
   });

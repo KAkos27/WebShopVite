@@ -12,25 +12,33 @@
       <div class="container">
         <div class="nav">
           <ul>
-            <li><a href="admin.html">Admin</a></li>
-            <li><a href="index.html">Termékeink</a></li>
-            <li><a href="#">Személyes adatok</a></li>
-            <li class="basket-button"><a href="#">Kosár 🛒</a></li>
+            <li class="hide-on-mobile">
+              <a href="public/admin.html">Admin</a>
+            </li>
+            <li class="hide-on-mobile"><a href="index.html">Termékeink</a></li>
+            <li class="basket-button hide-on-mobile">
+              <a href="#">Kosár 🛒</a>
+            </li>
+            <li class="show-on-mobile"><a href="#">☰</a></li>
           </ul>
         </div>
         <div class="basket-container invisible">
           <div class="basket"></div>
         </div>
         <div class="article">
-          <select class="form-elements" name="sort-options" id="sort-options">
+          <select
+            class="form-elements sort-options"
+            name="sort-options"
+            id="sort-options"
+          >
             <option value="1">Rendezési szempont</option>
-            <option value="2">Név szerint növekvő ⬆</option>
-            <option value="3">Név szerint csökkenő ⬇</option>
+            <option value="2">ABC sorrend</option>
+            <option value="3">Fordított ABC sorrend</option>
             <option value="4">Ár szerint növekvő ⬆</option>
             <option value="5">Ár szerint csökkenő ⬇</option>
           </select>
           <input
-            class="form-elements"
+            class="form-elements sort-options"
             type="text"
             placeholder="Keresés"
             id="search-bar"
