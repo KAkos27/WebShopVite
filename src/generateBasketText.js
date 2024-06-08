@@ -1,5 +1,5 @@
 const generateBasketText = () => {
-  let text = `<table>`;
+  let text = `<table class="basket__table">`;
   let final = 0;
   Object.keys(sessionStorage).forEach((item) => {
     const currentItem = JSON.parse(sessionStorage.getItem(item));

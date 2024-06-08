@@ -4,7 +4,7 @@ import removeFromBasket from "./removeFromBasket.js";
 import increaseBasketAmount from "./increaseBasketAmount.js";
 
 const initBasket = () => {
-  const basketContainer = $(".basket");
+  const basketContainer = $(".basket-items");
   const basketText = generateBasketText();
   createHtmlElement(basketContainer, basketText);
   removeFromBasket();
